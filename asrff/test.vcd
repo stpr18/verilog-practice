@@ -1,0 +1,105 @@
+$date
+	Wed May 21 16:40:45 2014
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TEST $end
+$var wire 1 ! q $end
+$var wire 1 " qb $end
+$var reg 2 # a [1:0] $end
+$var reg 1 $ ck $end
+$scope module asrfftest $end
+$var wire 1 % ck $end
+$var wire 1 " qb $end
+$var wire 1 & r $end
+$var wire 1 ' s $end
+$var reg 1 ( q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x(
+0'
+0&
+1%
+1$
+b0 #
+x"
+x!
+$end
+#5
+0$
+0%
+#10
+1'
+1$
+1%
+b10 #
+#15
+0"
+1(
+1!
+0$
+0%
+#20
+0'
+1$
+1%
+b0 #
+#25
+0$
+0%
+#30
+1&
+1$
+1%
+b1 #
+#35
+1"
+0(
+0!
+0$
+0%
+#40
+0&
+1$
+1%
+b0 #
+#45
+0$
+0%
+#50
+1&
+1$
+1%
+b1 #
+#55
+0$
+0%
+#60
+0&
+1$
+1%
+b0 #
+#65
+0$
+0%
+#70
+1'
+1$
+1%
+b10 #
+#75
+0"
+1(
+1!
+0$
+0%
+#80
+1$
+1%

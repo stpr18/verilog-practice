@@ -1,0 +1,18 @@
+VCD info: dumpfile test.vcd opened for output.
+                   0: ck:1 s:0 r:0 -> q:x qb:x
+                   5: ck:0 s:0 r:0 -> q:x qb:x
+                  10: ck:1 s:1 r:0 -> q:x qb:x
+                  15: ck:0 s:1 r:0 -> q:1 qb:0
+                  20: ck:1 s:0 r:0 -> q:1 qb:0
+                  25: ck:0 s:0 r:0 -> q:1 qb:0
+                  30: ck:1 s:0 r:1 -> q:1 qb:0
+                  35: ck:0 s:0 r:1 -> q:0 qb:1
+                  40: ck:1 s:0 r:0 -> q:0 qb:1
+                  45: ck:0 s:0 r:0 -> q:0 qb:1
+                  50: ck:1 s:0 r:1 -> q:0 qb:1
+                  55: ck:0 s:0 r:1 -> q:0 qb:1
+                  60: ck:1 s:0 r:0 -> q:0 qb:1
+                  65: ck:0 s:0 r:0 -> q:0 qb:1
+                  70: ck:1 s:1 r:0 -> q:0 qb:1
+                  75: ck:0 s:1 r:0 -> q:1 qb:0
+                  80: ck:1 s:1 r:0 -> q:1 qb:0

@@ -1,0 +1,50 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_007EA1A8 .scope module, "TEST" "TEST" 2 9;
+ .timescale 0 0;
+P_007E464C .param/l "BIT" 2 10, +C4<010>;
+v007E2CB0_0 .var "a", 1 0;
+v007E2D08_0 .net "cout", 0 0, L_007E3820; 1 drivers
+v007E2D60_0 .net "s", 0 0, L_007E7B18; 1 drivers
+L_007E3900 .part v007E2CB0_0, 1, 1;
+L_007E86C0 .part v007E2CB0_0, 0, 1;
+S_007E9E78 .scope module, "hatest" "HA" 2 27, 2 1, S_007EA1A8;
+ .timescale 0 0;
+L_007E7B18 .functor XOR 1, L_007E3900, L_007E86C0, C4<0>, C4<0>;
+L_007E3820 .functor AND 1, L_007E3900, L_007E86C0, C4<1>, C4<1>;
+v007E83F8_0 .alias "cout", 0 0, v007E2D08_0;
+v007E7940_0 .alias "s", 0 0, v007E2D60_0;
+v007E7820_0 .net "x", 0 0, L_007E3900; 1 drivers
+v007E7AC0_0 .net "y", 0 0, L_007E86C0; 1 drivers
+    .scope S_007EA1A8;
+T_0 ;
+    %vpi_call 2 16 "$dumpfile", "test.vcd";
+    %vpi_call 2 17 "$dumpvars", 1'sb0, S_007EA1A8;
+    %vpi_call 2 18 "$monitor", "%t: %b + %b = %b%b", $time, &PV<v007E2CB0_0, 1, 1>, &PV<v007E2CB0_0, 0, 1>, v007E2D08_0, v007E2D60_0;
+    %ix/load 0, 2, 0;
+    %assign/v0 v007E2CB0_0, 0, 0;
+    %movi 8, 3, 3;
+T_0.0 %cmp/s 0, 8, 3;
+    %jmp/0xz T_0.1, 5;
+    %add 8, 1, 3;
+    %delay 10, 0;
+    %load/v 11, v007E2CB0_0, 2;
+    %mov 13, 0, 30;
+    %addi 11, 1, 32;
+    %ix/load 0, 2, 0;
+    %assign/v0 v007E2CB0_0, 0, 11;
+    %jmp T_0.0;
+T_0.1 ;
+    %delay 10, 0;
+    %vpi_call 2 24 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "ha.v";

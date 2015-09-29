@@ -1,0 +1,92 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00AC8558 .scope module, "TEST" "TEST" 2 9;
+ .timescale 0 0;
+P_00AC78D4 .param/l "BIT" 2 10, +C4<011>;
+v0059F1F8_0 .var "a", 2 0;
+v0059EFE8_0 .net "cout", 0 0, L_00ACE848; 1 drivers
+v0059F0F0_0 .net "s", 0 0, L_00ACE5A8; 1 drivers
+L_0059F618 .part v0059F1F8_0, 1, 1;
+L_0059F250 .part v0059F1F8_0, 0, 1;
+L_0059F4B8 .part v0059F1F8_0, 2, 1;
+S_00AC85E0 .scope module, "fatest" "FA" 2 27, 2 1, S_00AC8558;
+ .timescale 0 0;
+L_00ACA130 .functor AND 1, L_0059F618, L_0059F250, C4<1>, C4<1>;
+L_00AC41F8 .functor AND 1, L_00ACA130, L_0059F4B8, C4<1>, C4<1>;
+L_00AC2D58 .functor NOT 1, L_0059F618, C4<0>, C4<0>, C4<0>;
+L_00AC2DC8 .functor NOT 1, L_0059F250, C4<0>, C4<0>, C4<0>;
+L_00AC4090 .functor AND 1, L_00AC2D58, L_00AC2DC8, C4<1>, C4<1>;
+L_00AC4138 .functor AND 1, L_00AC4090, L_0059F4B8, C4<1>, C4<1>;
+L_00ACA2B8 .functor OR 1, L_00AC41F8, L_00AC4138, C4<0>, C4<0>;
+L_00ACE2B0 .functor NOT 1, L_0059F250, C4<0>, C4<0>, C4<0>;
+L_00ACE128 .functor AND 1, L_0059F618, L_00ACE2B0, C4<1>, C4<1>;
+L_00ACE0F0 .functor NOT 1, L_0059F4B8, C4<0>, C4<0>, C4<0>;
+L_00ACE160 .functor AND 1, L_00ACE128, L_00ACE0F0, C4<1>, C4<1>;
+L_00ACE208 .functor OR 1, L_00ACA2B8, L_00ACE160, C4<0>, C4<0>;
+L_00ACE3C8 .functor NOT 1, L_0059F618, C4<0>, C4<0>, C4<0>;
+L_00ACE1D0 .functor AND 1, L_00ACE3C8, L_0059F250, C4<1>, C4<1>;
+L_00ACE2E8 .functor NOT 1, L_0059F4B8, C4<0>, C4<0>, C4<0>;
+L_00ACE278 .functor AND 1, L_00ACE1D0, L_00ACE2E8, C4<1>, C4<1>;
+L_00ACE5A8 .functor OR 1, L_00ACE208, L_00ACE278, C4<0>, C4<0>;
+L_00ACEB90 .functor AND 1, L_0059F618, L_0059F250, C4<1>, C4<1>;
+L_00ACE4C8 .functor AND 1, L_0059F250, L_0059F4B8, C4<1>, C4<1>;
+L_00ACE8F0 .functor OR 1, L_00ACEB90, L_00ACE4C8, C4<0>, C4<0>;
+L_00ACE538 .functor AND 1, L_0059F4B8, L_0059F618, C4<1>, C4<1>;
+L_00ACE848 .functor OR 1, L_00ACE8F0, L_00ACE538, C4<0>, C4<0>;
+v00AC92F8_0 .net *"_s0", 0 0, L_00ACA130; 1 drivers
+v00AC92A0_0 .net *"_s10", 0 0, L_00AC4138; 1 drivers
+v00AC93A8_0 .net *"_s12", 0 0, L_00ACA2B8; 1 drivers
+v00AC8F30_0 .net *"_s14", 0 0, L_00ACE2B0; 1 drivers
+v00AC9038_0 .net *"_s16", 0 0, L_00ACE128; 1 drivers
+v00AC9508_0 .net *"_s18", 0 0, L_00ACE0F0; 1 drivers
+v00AC9458_0 .net *"_s2", 0 0, L_00AC41F8; 1 drivers
+v00AC9610_0 .net *"_s20", 0 0, L_00ACE160; 1 drivers
+v00AC94B0_0 .net *"_s22", 0 0, L_00ACE208; 1 drivers
+v00AC9560_0 .net *"_s24", 0 0, L_00ACE3C8; 1 drivers
+v00AC9090_0 .net *"_s26", 0 0, L_00ACE1D0; 1 drivers
+v00AC9198_0 .net *"_s28", 0 0, L_00ACE2E8; 1 drivers
+v00AC95B8_0 .net *"_s30", 0 0, L_00ACE278; 1 drivers
+v00AC8F88_0 .net *"_s34", 0 0, L_00ACEB90; 1 drivers
+v00AC90E8_0 .net *"_s36", 0 0, L_00ACE4C8; 1 drivers
+v00AC9140_0 .net *"_s38", 0 0, L_00ACE8F0; 1 drivers
+v00AC9248_0 .net *"_s4", 0 0, L_00AC2D58; 1 drivers
+v0059ED28_0 .net *"_s40", 0 0, L_00ACE538; 1 drivers
+v0059ED80_0 .net *"_s6", 0 0, L_00AC2DC8; 1 drivers
+v0059F2A8_0 .net *"_s8", 0 0, L_00AC4090; 1 drivers
+v0059F5C0_0 .net "cin", 0 0, L_0059F4B8; 1 drivers
+v0059F148_0 .alias "cout", 0 0, v0059EFE8_0;
+v0059EDD8_0 .alias "s", 0 0, v0059F0F0_0;
+v0059F1A0_0 .net "x", 0 0, L_0059F618; 1 drivers
+v0059F3B0_0 .net "y", 0 0, L_0059F250; 1 drivers
+    .scope S_00AC8558;
+T_0 ;
+    %vpi_call 2 16 "$dumpfile", "test.vcd";
+    %vpi_call 2 17 "$dumpvars", 1'sb0, S_00AC8558;
+    %vpi_call 2 18 "$monitor", "%t: %b + %b + %b = %b%b", $time, &PV<v0059F1F8_0, 2, 1>, &PV<v0059F1F8_0, 1, 1>, &PV<v0059F1F8_0, 0, 1>, v0059EFE8_0, v0059F0F0_0;
+    %ix/load 0, 3, 0;
+    %assign/v0 v0059F1F8_0, 0, 0;
+    %movi 8, 7, 4;
+T_0.0 %cmp/s 0, 8, 4;
+    %jmp/0xz T_0.1, 5;
+    %add 8, 1, 4;
+    %delay 10, 0;
+    %load/v 12, v0059F1F8_0, 3;
+    %mov 15, 0, 29;
+    %addi 12, 1, 32;
+    %ix/load 0, 3, 0;
+    %assign/v0 v0059F1F8_0, 0, 12;
+    %jmp T_0.0;
+T_0.1 ;
+    %delay 10, 0;
+    %vpi_call 2 24 "$finish";
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "fa.v";
